@@ -54,12 +54,12 @@ export default function Main() {
             </div>
             <p className="text-[#68707d] text-sm">
               These low-profile sneakers are your perfect{' '}
-              <br className="desktop:hdden" /> casual wear{' '}
+              <br className="desktop:hidden" /> casual wear{' '}
               <br className="hidden desktop:block" /> companion. Featuring a
-              durable <br className="desktop:hdden" /> rubber outer sole,
+              durable <br className="desktop:hidden" /> rubber outer sole,
               they'll
               <br className="hidden desktop:block" />
-              withstand everything <br className="desktop:hdden" /> the ewather
+              withstand everything <br className="desktop:hidden" /> the ewather
               can offer
             </p>
             <div className="mobile:flex items-center space-x-24 desktop:none">
