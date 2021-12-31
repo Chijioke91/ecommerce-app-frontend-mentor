@@ -9,26 +9,35 @@ import { images, thumbnails } from '../../utils';
 
 export default function Main() {
   const [isOpen, setIsOpen] = useState(false);
+  const [index, setIndex] = useState(0);
   const [amount, setAmount] = useState(() => 125);
   const context = useItemContext();
 
   const total = amount * context.count;
 
   return (
-    <div className="w-screen desktop:block extraSmall:px-0 desktop:px-80 extraSmall:pt-4 extraSmall:pb-10 mobile:pt-6 mobile:pb-20 desktop:pt-16 desktop:pb-24 extraSmall:overflow-hidden">
+    <div className="w-screen desktop:block extraSmall:px-0 desktop:px-80 extraSmall:pt-4 extraSmall:pb-10 mobile:pt-6 mobile:pb-36 desktop:pt-16 desktop:pb-40 extraSmall:overflow-hidden">
       <div className="flex desktop:space-x-28">
         <div className="extraSmall:hidden desktop:block relative">
-          <div className={`w-96 rounded-lg overflow-hidden `}>
-            <img src={images[0].image} alt="pix" />
-          </div>
+          {images.map((img) => (
+            <div
+              key={img.id}
+              className={`w-96 rounded-lg overflow-hidden cursor-pointer ${
+                img.id === index ? 'block' : 'hidden'
+              }`}
+              onClick={() => setIsOpen(true)}
+            >
+              <img src={img.image} alt="pix" />
+            </div>
+          ))}
 
           <div className="absolute mt-6">
             <div className="flex space-x-5 cursor-pointer">
-              {thumbnails.map((thumbnail, id) => (
+              {thumbnails.map((thumbnail) => (
                 <div
-                  key={id}
+                  key={thumbnail.id}
                   className={`w-20 h-20 hover:opacity-40 duration-300 hover:border-[2.5px] hover:bg-[#ff7d1a] hover:border-[#ff7d1a] rounded-lg`}
-                  onClick={() => setIsOpen(true)}
+                  onClick={() => setIndex(thumbnail.id)}
                 >
                   <img
                     src={thumbnail.thumbnail}
