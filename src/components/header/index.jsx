@@ -33,7 +33,7 @@ export default function Header({ onOpen }) {
 
   return (
     <>
-      <header className="desktop:hidden fixed bg-white z-40 w-screen">
+      <header className="fixed bg-white z-40 w-screen desktop:hidden">
         <div className="flex justify-between">
           <div className="flex items-center space-x-4 px-6">
             <div
@@ -150,7 +150,7 @@ export default function Header({ onOpen }) {
         </div>
       </header>
 
-      <header className="mobile:hidden desktop:block w-screen px-28">
+      <header className="extraSmall:hidden desktop:block w-screen px-28">
         <div className="flex justify-between items-center pt-10 pb-4 border-b">
           <div className="flex items-center space-x-8 text-black">
             <Link

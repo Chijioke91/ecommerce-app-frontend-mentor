@@ -15,9 +15,9 @@ export default function Main() {
   const total = amount * context.count;
 
   return (
-    <div className="w-screen desktop:block mobile:px-0 desktop:px-80 mobile:py-6 desktop:pt-16 desktop:pb-24 mobile:overflow-hidden">
+    <div className="w-screen desktop:block extraSmall:px-0 desktop:px-80 extraSmall:pt-4 extraSmall:pb-10 mobile:pt-6 mobile:pb-20 desktop:pt-16 desktop:pb-24 extraSmall:overflow-hidden">
       <div className="flex desktop:space-x-28">
-        <div className="mobile:hidden desktop:block relative">
+        <div className="extraSmall:hidden desktop:block relative">
           <div className={`w-96 rounded-lg overflow-hidden `}>
             <img src={images[0].image} alt="pix" />
           </div>
@@ -42,9 +42,9 @@ export default function Main() {
         </div>
 
         <div className="desktop:mt-20">
-          <div className="mobile:px-8 desktop:px-0 flex flex-col space-y-5">
+          <div className="extraSmall:px-5 mobile:px-8 desktop:px-0 flex flex-col space-y-5">
             <div className="space-y-2">
-              <h5 className="text-[#ff7d1a] font-bold uppercase  desktop:text-sm tracking-wide text-opacity-80 mobile:text-xs">
+              <h5 className="text-[#ff7d1a] font-bold uppercase  desktop:text-sm tracking-wide text-opacity-80 extraSmall:text-xs">
                 Sneaker Company
               </h5>
               <h1 className="text-2xl desktop:text-4xl font-bold tracking-wide">
@@ -52,17 +52,15 @@ export default function Main() {
                 Sneakers
               </h1>
             </div>
-            <p className="text-[#68707d] text-sm">
+            <p className="text-[#68707d] extraSmall:text-xs mobile:text-sm ">
               These low-profile sneakers are your perfect{' '}
               <br className="desktop:hidden" /> casual wear{' '}
               <br className="hidden desktop:block" /> companion. Featuring a
               durable <br className="desktop:hidden" /> rubber outer sole,
-              they'll
-              <br className="hidden desktop:block" />
-              withstand everything <br className="desktop:hidden" /> the ewather
-              can offer
+              they'll <br className="hidden desktop:block" /> withstand
+              everything <br className="desktop:hidden" /> the weather can offer
             </p>
-            <div className="mobile:flex items-center space-x-24 desktop:none">
+            <div className="extraSmall:flex items-center extraSmall:space-x-12 mobile:space-x-24 desktop:none">
               <div className="flex space-x-3">
                 <h1 className="text-2xl font-extrabold tracking-wide">
                   {`$${amount}.00`}
@@ -76,8 +74,8 @@ export default function Main() {
               </span>
             </div>
 
-            <div className="flex mobile:flex-col desktop:flex-row mobile:space-y-4 desktop:space-y-0 desktop:space-x-5">
-              <div className="bg-[#f7f8fd] flex items-center justify-between mobile:w-full desktop:w-36 h-6 rounded-lg py-6 px-4">
+            <div className="flex extraSmall:flex-col desktop:flex-row extraSmall:space-y-4 desktop:space-y-0 desktop:space-x-5">
+              <div className="bg-[#f7f8fd] flex items-center justify-between extraSmall:w-full desktop:w-36 h-6 rounded-lg py-6 px-4">
                 <img
                   src={minus}
                   alt="minus"
@@ -94,7 +92,7 @@ export default function Main() {
               </div>
               <button
                 type="submit"
-                className="flex items-center  justify-center rounded-lg px-10 py-6 disabled:bg-opacity-30 bg-[#ff7d1a] text-white text-center mobile:w-full desktop:w-52 h-10"
+                className="flex items-center  justify-center rounded-lg px-10 py-6 disabled:bg-opacity-30 bg-[#ff7d1a] text-white text-center extraSmall:w-full desktop:w-52 h-10"
                 onClick={() => {
                   context.addToCart(
                     uuidv4(),

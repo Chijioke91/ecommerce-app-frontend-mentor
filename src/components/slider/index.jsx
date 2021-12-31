@@ -39,7 +39,7 @@ export default function index() {
         ))}
       </div>
 
-      <div className="absolute w-full top-1/2 flex justify-between px-4">
+      <div className="absolute w-full extraSmall:top-48  mobile:top-1/2 flex justify-between extraSmall:px-2 mobile:px-4">
         <div
           className="bg-white h-8 w-8 rounded-full flex items-center justify-center"
           onClick={() => changeSlide('l')}
